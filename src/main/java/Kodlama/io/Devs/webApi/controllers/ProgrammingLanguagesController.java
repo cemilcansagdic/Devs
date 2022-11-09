@@ -31,7 +31,7 @@ public class ProgrammingLanguagesController {
 		return manager.getAll();
 	}
 
-	@GetMapping("/{id}")
+	@GetMapping("/get/{id}")
 	public ProgrammingLanguage getById(@PathVariable() int id) {
 		return manager.getById(id);
 	}
@@ -46,7 +46,7 @@ public class ProgrammingLanguagesController {
 		manager.update(language);
 	}
 
-	@DeleteMapping("/{id}")
+	@DeleteMapping("/delete/{id}")
 	public void delete(@PathVariable(name = "id") int id) throws Exception {
 		manager.delete(id);
 	}
